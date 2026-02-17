@@ -10,10 +10,16 @@ on:
     branches: [main]
   workflow_dispatch:
 
+
+
 jobs:
   build-and-test:
     name: Build and Test
     runs-on: ubuntu-latest
+    env:
+      NODE_ENV: test
+      LOG_LEVEL: debug
+    
     
     strategy:
       matrix:
@@ -29,6 +35,11 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
           cache-dependency-path: 'sample-app/package-lock.json'
+
+      - name: Print environment variables
+        run: |
+          echo "Node Env: $NODE_ENV"
+          echo "Log Level: $LOG_LEVEL"
       
       - name: Install dependencies
         working-directory: ./sample-app
