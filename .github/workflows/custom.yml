@@ -18,8 +18,8 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        working-directory: ./sample-app
-        run: npm ci
+        working-directory: sample-app
+        run: npm install
 
       - name: Run tests
         working-directory: sample-app
