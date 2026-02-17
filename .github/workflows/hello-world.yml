@@ -1,3 +1,5 @@
+# testing push trigger
+
 name: Hello World Workflow
 
 on:
@@ -33,3 +35,10 @@ jobs:
       
       - name: Print success message
         run: echo "✅ Workflow completed successfully!"
+
+      - name: Use secret
+        run: |
+          echo "Secret length: ${#TEST_SECRET}"
+        env:
+          TEST_SECRET: ${{ secrets.TEST_SECRET }}
+

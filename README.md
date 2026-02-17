@@ -18,6 +18,11 @@ Welcome to your hands-on learning journey with **GitHub Actions**! This reposito
 - ✅ Working with secrets and environment variables
 - ✅ Real-world workflow examples
 
+<<<<<<< .merge_file_EN1gVc
+test develop
+=======
+test main
+>>>>>>> .merge_file_8kcEKj
 ## 🎯 Target Audience
 
 - Beginners to CI/CD
